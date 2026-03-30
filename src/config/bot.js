@@ -24,8 +24,8 @@ export const botConfig = {
     // 5 = Competing
     activities: [
       {
-        // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        // Text users will see (example: "Playing x!help | Xenku").
+        name: "",
         // Activity type number (0 = Playing).
         type: 0, 
       },
@@ -56,9 +56,9 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "Adın ne?", required: true },
+      { question: "Kaç yaşındasın lo?", required: true },
+      { question: "Neden katılmak istiyorsun", required: true },
     ],
 
     // Embed colors by application status.
@@ -136,7 +136,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Xenku Bot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -156,11 +156,11 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Para",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Para",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "TL",
     },
 
     // Starting balance for new users.
@@ -170,7 +170,7 @@ export const botConfig = {
     baseBankCapacity: 100000,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 200,
 
     // Work command random payout range.
     workMin: 10,
@@ -189,7 +189,7 @@ export const botConfig = {
   },
 
   // =========================
-  // SHOP SETTINGS
+  // MAĞAZA SİSTEMİ
   // =========================
   // Add shop defaults here when needed.
   shop: {
@@ -197,7 +197,7 @@ export const botConfig = {
   },
 
   // =========================
-  // TICKET SYSTEM
+  // BİLET SİSTEMİ
   // =========================
   tickets: {
     // Category ID where new tickets are created (null = no forced category).
@@ -211,32 +211,32 @@ export const botConfig = {
       none: {
         emoji: "⚪",
         color: "#95A5A6",
-        label: "None",
+        label: "Hiçbiri",
       },
       low: {
         emoji: "🟢",
         color: "#2ECC71",
-        label: "Low",
+        label: "Düşük",
       },
       medium: {
         emoji: "🟡",
         color: "#F1C40F",
-        label: "Medium",
+        label: "Orta",
       },
       high: {
         emoji: "🔴",
         color: "#E74C3C",
-        label: "High",
+        label: "Yüksek",
       },
       urgent: {
         emoji: "🚨",
         color: "#E91E63",
-        label: "Urgent",
+        label: "Acil",
       },
     },
 
     // Default priority for new tickets.
-    defaultPriority: "none",
+    defaultPriority: "hiçbiri",
 
     // Category ID where closed tickets are archived.
     archiveCategory: null,
@@ -246,7 +246,7 @@ export const botConfig = {
   },
 
   // =========================
-  // GIVEAWAY SETTINGS
+  // ÇEKİLİŞ AYARLARI
   // =========================
   giveaways: {
     // Default giveaway duration in milliseconds.
@@ -271,7 +271,7 @@ export const botConfig = {
   },
 
   // =========================
-  // BIRTHDAY SETTINGS
+  // DOĞUM GÜNÜ AYARLARI
   // =========================
   birthday: {
     // Role ID given to users on their birthday.
@@ -285,14 +285,14 @@ export const botConfig = {
   },
 
   // =========================
-  // VERIFICATION SETTINGS
+  // BİLDİRİM AYARLARI
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "butona basın ve kendinizi doğrulayın ve sunucuya erişim sağlayın!",
 
     // Text on the verification button.
-    defaultButtonText: "Verify",
+    defaultButtonText: "Doğrula",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -319,9 +319,9 @@ export const botConfig = {
 
       // Human-readable descriptions for each criteria mode.
       criteria: {
-        account_age: "Account must be older than specified days",
-        server_size: "All users if server has less than 1000 members",
-        none: "All users immediately"
+        account_age: "Hesap belirtilen günden daha eski olması lazımdır",
+        server_size: "Sunucunun 1000den az üyesi varsa tüm kullanıcılar",
+        none: "Tüm Kullanıcılar anında"
       }
     },
 
@@ -353,33 +353,33 @@ export const botConfig = {
   },
 
   // =========================
-  // WELCOME / GOODBYE MESSAGES
+  // HOŞGELDİN / GÖRÜŞÜRÜZ
   // =========================
   welcome: {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "Hoşgeldin! {user} ile {server} geldi! Şuan {memberCount} üyemiz var!",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "{user} Sunucumuzdan Ayrıldı. Şuan {memberCount} Üyemiz kaldı.",
     // Channel ID for welcome messages.
-    defaultWelcomeChannel: null,
+    defaultWelcomeChannel: null,Ü
     // Channel ID for goodbye messages.
     defaultGoodbyeChannel: null,
   },
 
   // =========================
-  // COUNTER CHANNELS
+  // SAYAÇ KANALI
   // =========================
   counters: {
     defaults: {
       // Default naming/description templates for counter entries.
-      name: "{name} Counter",
-      description: "Server {name} counter",
-      // Channel type used for counters (typically "voice").
-      type: "voice",
+      name: "{name} Sayaç",
+      description: "Server {name} Sayaç",
+      // Channel type used for counters (typically "ses").
+      type: "ses",
       // Channel name format. `{count}` is replaced automatically.
       channelName: "{name}-{count}",
     },
@@ -391,26 +391,26 @@ export const botConfig = {
     },
     messages: {
       // Default response messages for counter actions.
-      created: "✅ Created counter **{name}**",
-      deleted: "🗑️ Deleted counter **{name}**",
-      updated: "🔄 Updated counter **{name}**",
+      created: "✅ Sayaç Oluşturuldu **{name}**",
+      deleted: "🗑️ Sayaç Silindi **{name}**",
+      updated: "🔄 Sayaç Güncellendi **{name}**",
     },
     types: {
       // Built-in counter types and how each count is calculated.
       members: {
-        name: "👥 Members",
-        description: "Total members in the server",
+        name: "👥 Toplam Üyeler!",
+        description: "Toplam Üyemiz bu kadar",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
-        name: "🤖 Bots",
-        description: "Total bot accounts in the server",
+        name: "🤖 Botlar",
+        description: "Sunucudaki toplam bot sayısı",
         getCount: (guild) =>
           guild.members.cache.filter((m) => m.user.bot).size.toString(),
       },
       members_only: {
-        name: "👤 Humans",
-        description: "Total human members (non-bots)",
+        name: "👤 Üyeler",
+        description: "Toplam üye (botsuz)",
         getCount: (guild) =>
           guild.members.cache.filter((m) => !m.user.bot).size.toString(),
       },
@@ -421,13 +421,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
+    noPermission: "Bu komutu kullanma izniniz yok.",
+    cooldownActive: "Lütfen bu zamana kadar bekleyiniz {time} sonra tekrardan bu komutu kullanınız.",
+    errorOccurred: "Bu komut yürütülürken bir hata oluştu.",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
-    commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+      "Bu işlemi gerçekleştirmek için gerekli izinlere sahip değilim.",
+    commandDisabled: "Bu komut devre dışı bırakıldı.",
+    maintenanceMode: "Bot şu anda bakım modunda.",
   },
 
   // =========================
@@ -543,7 +543,3 @@ export function getRandomColor() {
 }
 
 export default botConfig;
-
-
-
-
