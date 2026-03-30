@@ -24,8 +24,8 @@ export const botConfig = {
     // 5 = Competing
     activities: [
       {
-        // Text users will see (example: "Playing /help | Titan Bot").
-        name: "Made with ❤️",
+        // Text users will see (example: "Playing x!help | Xenku bot").
+        name: "Made with Anan",
         // Activity type number (0 = Playing).
         type: 0, 
       },
@@ -156,9 +156,9 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "PARA",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "PARAAA",
       // Currency symbol shown in balances.
       symbol: "$",
     },
